@@ -1,10 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Plus, BarChart2 } from "lucide-react"; // Icon library
-import "./BottomBar.css"; // Import the CSS file
+import { Home, User, Plus, BarChart2, LogIn, UserCircle } from "lucide-react";
+import "./BottomBar.css"; // Ensure you have CSS for styling
 
-const BottomBar = ({ showLeaderboard, setShowLeaderboard }) => {
-  const location = useLocation(); // Get current page URL
+const BottomBar = ({ showLeaderboard, setShowLeaderboard, user }) => {
+  const location = useLocation();
 
   const items = [
     { title: "Home", url: "/", icon: Home },
@@ -25,6 +25,17 @@ const BottomBar = ({ showLeaderboard, setShowLeaderboard }) => {
         <button onClick={() => setShowLeaderboard(!showLeaderboard)}>
           <BarChart2 />
         </button>
+      )}
+
+      {/* Show Profile or Register */}
+      {user ? (
+        <Link to="/profile">
+          <UserCircle />
+        </Link>
+      ) : (
+        <Link to="/register">
+          <LogIn />
+        </Link>
       )}
     </div>
   );

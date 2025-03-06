@@ -1,28 +1,37 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Create.css"; // Import the CSS file for styling
+import "./Create.css"; // Import CSS for styling
 
-const Create = ({ setNgoList }) => {
+const Create = ({ setNgoList, user }) => {
   const [title, setTitle] = useState("");
   const [caption, setCaption] = useState("");
   const [image, setImage] = useState(null);
   const navigate = useNavigate();
 
+  // Handle Image Upload
   const handleImageChange = (e) => {
     setImage(URL.createObjectURL(e.target.files[0]));
   };
 
+  // Handle Post Creation
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const newNgo = {
+    if (!user) {
+      alert("Please register first to create a post.");
+      navigate("/register");
+      return;
+    }
+
+    const newPost = {
       id: Date.now(),
       name: title,
       work: caption,
       image: image,
+      user: user.email, // Associate post with logged-in user
     };
 
-    setNgoList((prevList) => [...prevList, newNgo]); // Update NGOs list
+    setNgoList((prevList) => [...prevList, newPost]); // Update NGOs list
     navigate("/ngos"); // Redirect to NGOs page
   };
 
@@ -38,6 +47,7 @@ const Create = ({ setNgoList }) => {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           className="input-field"
+          required
         />
 
         {/* Caption Input */}
@@ -46,6 +56,7 @@ const Create = ({ setNgoList }) => {
           value={caption}
           onChange={(e) => setCaption(e.target.value)}
           className="input-field"
+          required
         />
 
         {/* Image Upload */}
@@ -55,11 +66,12 @@ const Create = ({ setNgoList }) => {
           accept="image/*"
           onChange={handleImageChange}
           className="input-field"
+          required
         />
 
         {/* Submit Button */}
         <button type="submit" className="submit-btn">
-          Upload NGO
+          Upload Post
         </button>
       </form>
     </div>

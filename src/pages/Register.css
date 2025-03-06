@@ -1,0 +1,57 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #b18ef6; /* Purple */
+    margin-bottom: 20px;
+}
+
+.register-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #a855f7, #9333ea);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(to right, #9333ea, #7c3aed);
+}
