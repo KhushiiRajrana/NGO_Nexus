@@ -3,11 +3,13 @@ import Home from "./pages/Home";
 import Create from "./pages/Create";
 import NGOs from "./pages/NGOs";
 import BottomBar from "./components/BottomBar";
+import './App.css';
+
 
 function App() {
   return (
     <Router>
-      <div className="relative min-h-screen pb-16 bg-black text-white">
+      <div className="app-container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
@@ -18,5 +20,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;

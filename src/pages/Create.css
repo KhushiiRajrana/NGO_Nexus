@@ -1,0 +1,63 @@
+/* Container */
+.create-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+    padding: 24px;
+  }
+  
+  /* Heading */
+  .create-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #a855f7;
+    margin-bottom: 24px;
+  }
+  
+  /* Form */
+  .create-form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Labels */
+  .create-form label {
+    font-weight: 500;
+    color: white;
+  }
+  
+  /* Input Fields */
+  .create-form input,
+  .create-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    background-color: white;
+    color: black;
+  }
+  
+  /* Button */
+  .create-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 16px;
+    border-radius: 6px;
+    background: linear-gradient(to right, #9333ea, #7e22ce);
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .create-form button:hover {
+    background: linear-gradient(to right, #7e22ce, #6b21a8);
+  }
+  

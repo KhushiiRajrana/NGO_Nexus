@@ -1,4 +1,5 @@
 import React from "react";
+import "./NGOs.css"; // Import the CSS file
 
 const NGOs = () => {
   const ngoList = [
@@ -8,13 +9,13 @@ const NGOs = () => {
   ];
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Registered NGOs</h1>
-      <ul className="mt-4 space-y-2">
+    <div className="ngo-container">
+      <h1>Registered NGOs</h1>
+      <ul className="ngo-list">
         {ngoList.map((ngo) => (
-          <li key={ngo.id} className="p-4 border rounded shadow-md">
-            <h2 className="text-lg font-semibold">{ngo.name}</h2>
-            <p className="text-gray-600">{ngo.work}</p>
+          <li key={ngo.id} className="ngo-item">
+            <h2>{ngo.name}</h2>
+            <p>{ngo.work}</p>
           </li>
         ))}
       </ul>

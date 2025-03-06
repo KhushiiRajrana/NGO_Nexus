@@ -1,0 +1,20 @@
+/* Container */
+.home-container {
+    padding: 24px;
+  }
+  
+  /* Heading */
+  .home-container h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: white;
+  }
+  
+  /* Paragraph */
+  .home-container p {
+    color: #bbb;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
