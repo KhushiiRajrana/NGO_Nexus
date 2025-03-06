@@ -1,38 +1,59 @@
 import React, { useState } from "react";
 
 const Create = () => {
-  const [ngoName, setNgoName] = useState("");
-  const [ngoWork, setNgoWork] = useState("");
+  const [title, setTitle] = useState("");
+  const [caption, setCaption] = useState("");
+  const [image, setImage] = useState(null);
+
+  const handleImageChange = (e) => {
+    setImage(e.target.files[0]);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("NGO Created:", { ngoName, ngoWork });
-    alert("NGO Created Successfully!");
-    setNgoName("");
-    setNgoWork("");
+    console.log({ title, caption, image });
   };
 
   return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold">Register Your NGO</h1>
-      <form onSubmit={handleSubmit} className="mt-4 space-y-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-black px-6">
+      <h1 className="text-3xl font-bold text-purple-400 mb-6">Upload Here</h1>
+      
+      <form 
+        onSubmit={handleSubmit} 
+        className="w-full max-w-sm flex flex-col gap-4"
+      >
+        {/* Title Input */}
+        <label className="text-white font-medium">Title</label>
         <input
           type="text"
-          placeholder="NGO Name"
-          value={ngoName}
-          onChange={(e) => setNgoName(e.target.value)}
-          className="w-full p-2 border rounded"
-          required
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          className="w-full p-2 rounded-md border border-gray-400 bg-white text-black"
         />
+
+        {/* Caption Input */}
+        <label className="text-white font-medium">Caption</label>
         <textarea
-          placeholder="Brief Description of Work"
-          value={ngoWork}
-          onChange={(e) => setNgoWork(e.target.value)}
-          className="w-full p-2 border rounded"
-          required
+          value={caption}
+          onChange={(e) => setCaption(e.target.value)}
+          className="w-full p-2 rounded-md border border-gray-400 bg-white text-black"
         />
-        <button type="submit" className="px-4 py-2 bg-blue-500 text-white rounded">
-          Register
+
+        {/* Image Upload */}
+        <label className="text-white font-medium">Image</label>
+        <input
+          type="file"
+          accept="image/*"
+          onChange={handleImageChange}
+          className="w-full p-2 rounded-md border border-gray-400 bg-white text-black"
+        />
+
+        {/* Submit Button */}
+        <button 
+          type="submit" 
+          className="w-full p-3 mt-4 rounded-md bg-gradient-to-r from-purple-500 to-purple-700 text-white font-bold"
+        >
+          Upload Meme
         </button>
       </form>
     </div>
