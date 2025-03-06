@@ -1,4 +1,3 @@
-/* Container */
 .create-container {
     display: flex;
     flex-direction: column;
@@ -6,58 +5,54 @@
     justify-content: center;
     min-height: 100vh;
     background-color: black;
-    padding: 24px;
+    padding: 20px;
   }
   
-  /* Heading */
-  .create-container h1 {
+  .title {
     font-size: 28px;
     font-weight: bold;
-    color: #a855f7;
-    margin-bottom: 24px;
+    color: #b18ef6; /* Purple */
+    margin-bottom: 20px;
   }
   
-  /* Form */
   .create-form {
     width: 100%;
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 12px;
   }
   
-  /* Labels */
-  .create-form label {
-    font-weight: 500;
+  label {
+    font-size: 16px;
+    font-weight: 600;
     color: white;
   }
   
-  /* Input Fields */
-  .create-form input,
-  .create-form textarea {
+  .input-field {
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid gray;
     background-color: white;
     color: black;
+    font-size: 16px;
   }
   
-  /* Button */
-  .create-form button {
+  .submit-btn {
     width: 100%;
     padding: 12px;
-    margin-top: 16px;
+    margin-top: 12px;
     border-radius: 6px;
-    background: linear-gradient(to right, #9333ea, #7e22ce);
+    background: linear-gradient(to right, #a855f7, #9333ea);
     color: white;
+    font-size: 16px;
     font-weight: bold;
-    border: none;
     cursor: pointer;
-    transition: 0.3s;
+    border: none;
   }
   
-  .create-form button:hover {
-    background: linear-gradient(to right, #7e22ce, #6b21a8);
+  .submit-btn:hover {
+    background: linear-gradient(to right, #9333ea, #7c3aed);
   }
   
