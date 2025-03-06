@@ -1,20 +1,54 @@
-/* Container */
 .home-container {
-    padding: 24px;
-  }
-  
-  /* Heading */
-  .home-container h1 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 12px;
-    color: white;
-  }
-  
-  /* Paragraph */
-  .home-container p {
-    color: #bbb;
-    font-size: 16px;
-    line-height: 1.5;
-  }
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #74EBD5 0%, #9FACE6 100%);
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.explore-btn {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: #ff7e5f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.explore-btn:hover {
+  background: #feb47b;
+}
+
   
