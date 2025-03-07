@@ -1,82 +1,20 @@
-/* Smooth Gradient Animation */
-@keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Fade-In Effect */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-/* Shake Effect for Like Button */
-@keyframes shake {
-    0%, 100% { transform: translateX(0); }
-    25% { transform: translateX(-2px); }
-    50% { transform: translateX(2px); }
-    75% { transform: translateX(-2px); }
-}
-
-/* Shimmer Effect for Post Image */
-@keyframes shimmer {
-    0% { background-position: -100% 0; }
-    100% { background-position: 100% 0; }
-}
-
-/* Slide-Up Animation */
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-/* 🔹 Profile Container */
-.profile-container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    background: black;
-    color: white;
-    border-radius: 8px;
-    text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-/* 🔹 Title & Email */
-.title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #a855f7;
-}
-
-.email {
+/* Ensure Labels Are Visible */
+label {
+    display: block;  /* Make labels appear on a new line */
     font-size: 16px;
-    color: gray;
-}
-
-/* 🔹 Register Message */
-.register-message a {
-    color: #a855f7;
     font-weight: bold;
-    text-decoration: none;
+    margin-bottom: 5px;
+    color: white; /* Ensure visibility on dark backgrounds */
 }
 
-/* 🔹 Create Post Form */
-.create-post-container {
-    margin-top: 20px;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 8px;
-    animation: fadeIn 0.6s ease-in-out;
-}
-
-.create-form {
+/* Styling for Input Containers */
+.input-group {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    margin-bottom: 15px;
 }
 
+/* Input Field Styling */
 .input-field {
     width: 100%;
     padding: 12px;
@@ -87,7 +25,7 @@
     font-size: 16px;
 }
 
-/* 🔹 Submit Button with Gradient */
+/* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -107,94 +45,4 @@
 .submit-btn:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px rgba(168, 85, 247, 0.5);
-}
-
-/* 🔹 User Posts Section */
-.user-posts {
-    margin-top: 20px;
-}
-
-/* 🔹 Post Card with Animated Background */
-.post-card {
-    padding: 15px;
-    background: linear-gradient(135deg, #262626, #3f3f46);
-    background-size: 200% 200%;
-    border-radius: 10px;
-    margin-top: 15px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: gradientAnimation 6s ease infinite;
-}
-
-.post-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
-}
-
-/* 🔹 Post Image with Shimmer Effect */
-.post-image {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-}
-
-/* 🔹 Post Actions */
-.post-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-/* 🔹 Like Button */
-.like-btn {
-    background: none;
-    border: none;
-    font-size: 18px;
-    color: white;
-    cursor: pointer;
-    transition: color 0.3s ease;
-}
-
-.like-btn:hover {
-    color: #a855f7;
-}
-
-.like-btn:active {
-    animation: shake 0.3s ease-in-out;
-}
-
-/* 🔹 Comment Section with Slide-Up Animation */
-.comment-section {
-    width: 100%;
-    margin-top: 10px;
-    animation: slideUp 0.5s ease-in-out;
-}
-
-.comment-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid gray;
-    border-radius: 6px;
-    background: white;
-    color: black;
-}
-
-.comment-section ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 5px;
-}
-
-.comment-section li {
-    text-align: left;
-    background: #333;
-    padding: 8px;
-    margin-top: 5px;
-    border-radius: 6px;
-    font-size: 14px;
-    color: white;
 }
