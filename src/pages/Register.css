@@ -1,20 +1,29 @@
-/* Ensure Labels Are Visible */
+/* Centering the Create Container */
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Keep everything else intact */
 label {
-    display: block;  /* Make labels appear on a new line */
+    display: block;
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
-    color: white; /* Ensure visibility on dark backgrounds */
+    color: white;
 }
 
-/* Styling for Input Containers */
 .input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
 }
 
-/* Input Field Styling */
 .input-field {
     width: 100%;
     padding: 12px;
@@ -25,7 +34,6 @@ label {
     font-size: 16px;
 }
 
-/* Submit Button */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -45,4 +53,14 @@ label {
 .submit-btn:hover {
     transform: scale(1.05);
     box-shadow: 0px 4px 15px rgba(168, 85, 247, 0.5);
+}
+
+/* Optional: Add a wrapper to control width */
+.create-form {
+    width: 100%;
+    max-width: 500px; /* Limit form width to keep it neat */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
