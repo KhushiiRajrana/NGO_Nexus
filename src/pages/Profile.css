@@ -19,7 +19,10 @@
     color: #ffffff;
     margin: 0 auto; /* Center horizontally */
     max-width: 1200px; /* Limit width for larger screens */
+    width: 100%; /* Ensure it takes full width */
+    box-sizing: border-box; /* Prevent padding from affecting width */
 }
+
 
 /* Profile Header */
 .profile-header {
