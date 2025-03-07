@@ -26,11 +26,27 @@ const Register = ({ setUser }) => {
       <h1 className="title">Register</h1>
 
       <form onSubmit={handleSubmit} className="create-form">
-        <label>Name</label>
-        <input type="text" value={name} onChange={(e) => setName(e.target.value)} className="input-field" />
+        <div className="input-group">
+          <label htmlFor="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="input-field"
+          />
+        </div>
 
-        <label>Email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} className="input-field" />
+        <div className="input-group">
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="input-field"
+          />
+        </div>
 
         <button type="submit" className="submit-btn">Register</button>
       </form>
