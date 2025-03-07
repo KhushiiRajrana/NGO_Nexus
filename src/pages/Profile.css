@@ -17,6 +17,8 @@
     background-color: #121212;
     text-align: center;
     color: #ffffff;
+    margin: 0 auto; /* Center horizontally */
+    max-width: 1200px; /* Limit width for larger screens */
 }
 
 /* Profile Header */
@@ -83,132 +85,10 @@
     font-style: italic;
 }
 
-/* Create Post Box */
-.create-post-container {
-    background-color: #1e1e1e;
-    padding: 20px;
-    border-radius: 12px;
-    max-width: 500px;
-    width: 100%;
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
-    margin-bottom: 25px;
-}
-
-/* Form Inputs */
-.create-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-}
-
-.input-field {
-    padding: 12px;
-    border-radius: 6px;
-    border: 1px solid #555;
-    background-color: white;
-    color: black;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border 0.3s;
-}
-
-.input-field:focus {
-    border: 1px solid #a855f7;
-}
-
-textarea.input-field {
-    resize: vertical;
-    min-height: 80px;
-    max-height: 200px;
-}
-
-/* Submit Button */
-.submit-btn {
-    padding: 12px;
-    border-radius: 6px;
-    background: linear-gradient(to right, #a855f7, #9333ea);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    width: 100%;
-    transition: background 0.3s;
-}
-
-.submit-btn:hover {
-    background: linear-gradient(to right, #9333ea, #7c3aed);
-}
-
-/* Posts Section */
-.user-posts {
-    width: 100%;
-    max-width: 650px;
-}
-
-.post-card {
-    background-color: #1a1a1a;
-    color: white;
-    padding: 15px;
-    margin-bottom: 12px;
-    border-radius: 12px;
-    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.1);
-    text-align: left;
-    transition: transform 0.2s ease-in-out;
-}
-
-.post-card:hover {
-    transform: scale(1.02);
-}
-
-.post-image {
-    width: 100%;
-    max-height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-.post-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 12px;
-}
-
-.like-btn {
-    background: transparent;
-    border: none;
-    color: red;
-    cursor: pointer;
-    font-size: 18px;
-    transition: transform 0.2s;
-}
-
-.like-btn:hover {
-    transform: scale(1.2);
-}
-
-.comment-section {
-    margin-top: 12px;
-}
-
-.comment-input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid gray;
-    background-color: white;
-    color: black;
-}
-
 /* Responsive Design */
-@media (max-width: 500px) {
-    .create-post-container {
-        max-width: 95%;
-    }
+@media (max-width: 768px) {
     .profile-container {
         padding: 15px;
-    }
-    .profile-info {
         max-width: 95%;
     }
     .name-input {
