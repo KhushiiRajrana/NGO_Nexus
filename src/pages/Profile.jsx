@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { UserCircle } from "lucide-react";
-import "./Profile.css"; // Ensure this file is correctly linked
+import "./Profile.css"; 
 
 const Profile = ({ user, ngoList, setNgoList }) => {
   const [title, setTitle] = useState("");
