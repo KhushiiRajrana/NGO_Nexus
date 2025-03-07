@@ -1,103 +1,72 @@
-/* Reset default margin and padding */
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-/* Centering the entire page content */
-.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #121212;
+  }
+  
+  .profile-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: #121212;
     text-align: center;
     color: #ffffff;
-    margin: 0 auto; /* Center horizontally */
-    max-width: 1200px; /* Limit width for larger screens */
-    width: 100%; /* Ensure it takes full width */
-    box-sizing: border-box; /* Prevent padding from affecting width */
-}
-
-
-/* Profile Header */
-.profile-header {
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .profile-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    margin-bottom: 25px;
-}
-
-/* Profile Picture */
-.profile-pic {
+  }
+  
+  .profile-pic {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     border: 3px solid #b18ef6;
-    object-fit: cover;
-    object-position: center;
-    display: block;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-.profile-pic:hover {
-    transform: scale(1.05);
-}
-
-/* Editable Name and Bio */
-.profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 8px;
-    margin-top: 12px;
-}
-
-.name-input, .bio-input {
+  }
+  
+  .profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .editable-input {
     background: transparent;
     border: none;
     color: white;
     text-align: center;
     padding: 6px;
     outline: none;
-    width: 100%;
-    max-width: 280px;
-    transition: border-bottom 0.3s;
-}
-
-.name-input {
+  }
+  
+  .name-input {
     font-size: 24px;
     font-weight: bold;
-    border-bottom: 2px solid transparent;
-}
-
-.name-input:focus, .bio-input:focus {
-    border-bottom: 2px solid #a855f7;
-}
-
-.bio-input {
+  }
+  
+  .bio-input {
     font-size: 16px;
     font-style: italic;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  
+  @media (max-width: 768px) {
     .profile-container {
-        padding: 15px;
-        max-width: 95%;
+      padding: 15px;
+      max-width: 95%;
     }
-    .name-input {
-        font-size: 20px;
-    }
-    .bio-input {
-        font-size: 14px;
-    }
-}
+  }
+  
