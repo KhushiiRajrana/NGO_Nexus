@@ -1,111 +1,57 @@
+/* Profile and Post Styling */
+
 .profile-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: flex-start;
     padding: 20px;
-    box-sizing: border-box;
-    gap: 40px;
-}
-
-.profile-card {
-    background: #121212;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 800px;
-    width: 100%;
-    text-align: center;
-    color: #fff;
-}
-
-.profile-pic {
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #a855f7;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 20px;
-    overflow: hidden;
-}
-
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.editable-input {
-    background: transparent;
-    border: none;
-    border-bottom: 2px solid #a855f7;
-    color: #fff;
-    padding: 10px;
-    width: 100%;
-    margin: 10px 0;
-    text-align: center;
-}
-
-.editable-input:focus {
-    outline: none;
-    border-bottom: 2px solid #9333ea;
-}
-
-textarea.editable-input {
-    resize: none;
-    height: 80px;
-}
-
-.post-section {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
-.post-form {
-    background: #fff;
+.profile-section {
+    width: 300px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #a855f7;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+}
+
+.editable-textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.post-section {
+    max-width: 600px;
+    width: 100%;
     padding: 20px;
+    border: 1px solid #ccc;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.post-form input, .post-form textarea {
+.post-section input,
+.post-section textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
-.post-form button {
+.post-section button {
     width: 100%;
     padding: 10px;
-    background: linear-gradient(90deg, #7b2cbf, #9d4edd);
+    background: #a855f7;
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-}
-
-.post-form button:hover {
-    background: linear-gradient(90deg, #5a189a, #7b2cbf);
-}
-
-@media (max-width: 768px) {
-    .profile-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-card {
-        padding: 15px;
-    }
-
-    .profile-pic {
-        width: 100px;
-        height: 100px;
-    }
 }
