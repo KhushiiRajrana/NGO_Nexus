@@ -2,23 +2,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start; /* Align content to the top */
     padding: 20px;
     background-color: black;
     min-height: 100vh;
     color: white;
+    width: 100vw;
 }
 
 .title {
     font-size: 28px;
     font-weight: bold;
     color: #b18ef6;
+    text-align: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 .email {
     font-size: 16px;
     color: gray;
     margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
 }
 
 .create-post-container {
@@ -81,3 +87,23 @@
     object-fit: cover;
     border-radius: 6px;
 }
+
+/* Added full-width alignment and centering */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Now everything should be centered with the same styling! */
