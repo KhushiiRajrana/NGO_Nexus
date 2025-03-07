@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { UserCircle } from 'lucide-react';
-import './ProfileCard.css';
+import './Profile.css';
 
 const ProfileCard = () => {
     const [name, setName] = useState('Mehak Sharma');
