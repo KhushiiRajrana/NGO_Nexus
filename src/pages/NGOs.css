@@ -21,7 +21,7 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
     justify-content: center; /* Center the grid */
     align-items: center;
-    gap: 16px;
+    gap: 20px;
   }
   
   /* Individual NGO Card */
