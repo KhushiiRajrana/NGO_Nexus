@@ -1,3 +1,11 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
 /* Centering the entire page content */
 .profile-container {
     display: flex;
@@ -6,8 +14,9 @@
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    background-color: #000;
+    background-color: #121212;
     text-align: center;
+    color: #ffffff;
 }
 
 /* Profile Header */
@@ -15,16 +24,26 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
+/* Profile Picture */
 .profile-pic {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     border: 3px solid #b18ef6;
     object-fit: cover;
+    object-position: center;
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
 }
 
 /* Editable Name and Bio */
@@ -33,8 +52,8 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5px;
-    margin-top: 10px;
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .name-input, .bio-input {
@@ -42,15 +61,21 @@
     border: none;
     color: white;
     text-align: center;
-    padding: 5px;
+    padding: 6px;
     outline: none;
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
+    transition: border-bottom 0.3s;
 }
 
 .name-input {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
+    border-bottom: 2px solid transparent;
+}
+
+.name-input:focus, .bio-input:focus {
+    border-bottom: 2px solid #a855f7;
 }
 
 .bio-input {
@@ -58,33 +83,38 @@
     font-style: italic;
 }
 
-/* Fix for Create Post Box */
+/* Create Post Box */
 .create-post-container {
-    background-color: #222;
+    background-color: #1e1e1e;
     padding: 20px;
-    border-radius: 10px;
-    max-width: 450px;
+    border-radius: 12px;
+    max-width: 500px;
     width: 100%;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
-    margin-bottom: 20px;  /* Space between post box and posts */
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.1);
+    margin-bottom: 25px;
 }
 
 /* Form Inputs */
 .create-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
     width: 100%;
 }
 
 .input-field {
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid gray;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #555;
     background-color: white;
     color: black;
     width: 100%;
     box-sizing: border-box;
+    transition: border 0.3s;
+}
+
+.input-field:focus {
+    border: 1px solid #a855f7;
 }
 
 textarea.input-field {
@@ -95,14 +125,15 @@ textarea.input-field {
 
 /* Submit Button */
 .submit-btn {
-    padding: 10px;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 6px;
     background: linear-gradient(to right, #a855f7, #9333ea);
     color: white;
     font-weight: bold;
     cursor: pointer;
     border: none;
     width: 100%;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
@@ -112,22 +143,27 @@ textarea.input-field {
 /* Posts Section */
 .user-posts {
     width: 100%;
-    max-width: 600px;
+    max-width: 650px;
 }
 
 .post-card {
     background-color: #1a1a1a;
     color: white;
     padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
+    margin-bottom: 12px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 6px rgba(255, 255, 255, 0.1);
     text-align: left;
+    transition: transform 0.2s ease-in-out;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
 }
 
 .post-image {
     width: 100%;
-    max-height: 200px;
+    max-height: 220px;
     object-fit: cover;
     border-radius: 10px;
 }
@@ -135,7 +171,7 @@ textarea.input-field {
 .post-actions {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .like-btn {
@@ -144,29 +180,41 @@ textarea.input-field {
     color: red;
     cursor: pointer;
     font-size: 18px;
+    transition: transform 0.2s;
+}
+
+.like-btn:hover {
+    transform: scale(1.2);
 }
 
 .comment-section {
-    margin-top: 10px;
+    margin-top: 12px;
 }
 
 .comment-input {
     width: 100%;
-    padding: 8px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 6px;
     border: 1px solid gray;
     background-color: white;
     color: black;
 }
 
+/* Responsive Design */
 @media (max-width: 500px) {
     .create-post-container {
-        max-width: 90%;
+        max-width: 95%;
     }
     .profile-container {
-        padding: 10px;
+        padding: 15px;
     }
     .profile-info {
-        max-width: 90%;
+        max-width: 95%;
+    }
+    .name-input {
+        font-size: 20px;
+    }
+    .bio-input {
+        font-size: 14px;
     }
 }

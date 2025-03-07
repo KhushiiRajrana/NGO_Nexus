@@ -1,5 +1,10 @@
 /* Container */
 .ngo-container {
+  display: flex;
+    flex-direction: column; /* Keeps items in a column */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    min-height: 100vh;
     padding: 24px;
   }
   
@@ -12,9 +17,11 @@
   
   /* NGO List */
   .ngo-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    justify-content: center; /* Center the grid */
+    align-items: center;
+    gap: 16px;
   }
   
   /* Individual NGO Card */
@@ -40,4 +47,15 @@
     color: #bbb;
     font-size: 14px;
   }
+  /* NGO Image */
+/* NGO Image */
+.ngo-item img {
+  width: 100%; /* Full width of container */
+  height: 200px; /* Fixed height for uniformity (Adjust as needed) */
+  object-fit: cover; /* Crop & scale image to fit properly */
+  display: block; /* Removes unwanted spacing */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+
   
