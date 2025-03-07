@@ -28,7 +28,8 @@
   color: #b18ef6;
   text-align: center;
   margin-bottom: 20px;
-  width: 100%; /* Ensures the element stretches across */
+  width: 100%; 
+  margin-top: 20px;/* Ensures the element stretches across */
 }
 
 
