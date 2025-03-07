@@ -1,37 +1,50 @@
-.register-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: black;
+.profile-container {
+    max-width: 600px;
+    margin: auto;
     padding: 20px;
+    background: black;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
 }
 
+/* Profile title */
 .title {
     font-size: 28px;
     font-weight: bold;
-    color: #b18ef6; /* Purple */
-    margin-bottom: 20px;
+    color: #a855f7;
 }
 
-.register-form {
-    width: 100%;
-    max-width: 400px;
+/* Email styling */
+.email {
+    font-size: 16px;
+    color: gray;
+}
+
+/* Register message */
+.register-message a {
+    color: #a855f7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Post Creation Form */
+.create-post-container {
+    margin-top: 20px;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+}
+
+.create-form {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-}
-
-label {
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
+    gap: 10px;
 }
 
 .input-field {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
     border: 1px solid gray;
     background-color: white;
@@ -39,6 +52,7 @@ label {
     font-size: 16px;
 }
 
+/* Submit button */
 .submit-btn {
     width: 100%;
     padding: 12px;
@@ -50,8 +64,87 @@ label {
     font-weight: bold;
     cursor: pointer;
     border: none;
+    transition: background 0.3s;
 }
 
 .submit-btn:hover {
     background: linear-gradient(to right, #9333ea, #7c3aed);
+}
+
+/* User Posts */
+.user-posts {
+    margin-top: 20px;
+}
+
+.post-card {
+    padding: 15px;
+    background: #262626;
+    border-radius: 10px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s;
+}
+
+.post-card:hover {
+    transform: scale(1.02);
+}
+
+/* Post Image */
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Like Button */
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.like-btn:hover {
+    color: #a855f7;
+}
+
+/* Comment Section */
+.comment-section {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 6px;
+    background: white;
+    color: black;
+}
+
+.comment-section ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+}
+
+.comment-section li {
+    text-align: left;
+    background: #333;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: white;
 }

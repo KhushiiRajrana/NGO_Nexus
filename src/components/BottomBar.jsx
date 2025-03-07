@@ -1,42 +1,36 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Home, User, Plus, BarChart2, LogIn, UserCircle } from "lucide-react";
-import "./BottomBar.css"; // Ensure you have CSS for styling
+import { Home, Users, Plus, BarChart2, LogIn, UserCircle } from "lucide-react";
+import "./BottomBar.css"; // Import CSS for styling
 
 const BottomBar = ({ showLeaderboard, setShowLeaderboard, user }) => {
   const location = useLocation();
 
   const items = [
     { title: "Home", url: "/", icon: Home },
-    { title: "NGOs", url: "/ngos", icon: User },
+    { title: "NGOs", url: "/ngos", icon: Users }, // Changed to Users icon to avoid confusion
     { title: "Create", url: "/create", icon: Plus },
   ];
 
   return (
     <div className="bottom-bar">
       {items.map((item) => (
-        <Link key={item.title} to={item.url}>
-          <item.icon />
+        <Link key={item.title} to={item.url} className="nav-item">
+          <item.icon size={28} />
         </Link>
       ))}
 
       {/* Show Leaderboard button only on Home Page */}
       {location.pathname === "/" && (
-        <button onClick={() => setShowLeaderboard(!showLeaderboard)}>
-          <BarChart2 />
+        <button className="nav-item" onClick={() => setShowLeaderboard(!showLeaderboard)}>
+          <BarChart2 size={28} />
         </button>
       )}
 
-      {/* Show Profile or Register */}
-      {user ? (
-        <Link to="/profile">
-          <UserCircle />
-        </Link>
-      ) : (
-        <Link to="/register">
-          <LogIn />
-        </Link>
-      )}
+      {/* Corrected Profile Link */}
+      <Link to={user ? "/profile" : "/register"} className="nav-item">
+        <UserCircle size={28} />
+      </Link>
     </div>
   );
 };
