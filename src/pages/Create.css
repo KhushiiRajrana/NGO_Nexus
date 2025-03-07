@@ -24,13 +24,14 @@
 /* Title styling */
 .title {
   font-size: 28px;
-  font-weight:bolder;
+  font-weight: 800; /* Or try 900 for extra bold */
   color: #b18ef6;
   text-align: center;
   margin-bottom: 20px;
-  width: 100%; 
-  margin-top: 20px;/* Ensures the element stretches across */
+  width: 100%;
+  margin-top: 20px;
 }
+
 
 
 /* Input fields */
