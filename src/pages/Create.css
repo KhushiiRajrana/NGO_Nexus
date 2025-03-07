@@ -28,7 +28,9 @@
   color: #b18ef6;
   text-align: center;
   margin-bottom: 20px;
+  width: 100%; /* Ensures the element stretches across */
 }
+
 
 /* Input fields */
 .input-field {
