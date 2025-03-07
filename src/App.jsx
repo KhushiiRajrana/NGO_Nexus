@@ -6,6 +6,7 @@ import NGOs from "./pages/NGOs";
 import Profile from "./pages/Profile";
 import Register from "./pages/Register";
 import BottomBar from "./components/BottomBar";
+import Navbar from "./components/Navbar"; // ✅ Navbar Import Kiya
 
 function App() {
   const [user, setUser] = useState(null);
@@ -14,6 +15,7 @@ function App() {
   return (
     <Router>
       <div className="relative min-h-screen pb-16 bg-black text-white">
+        <Navbar />  {/* ✅ Navbar yaha add kiya hai */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register setUser={setUser} />} />
